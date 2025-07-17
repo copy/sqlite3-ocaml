@@ -1,0 +1,18 @@
+(executable
+ (name test)
+ (libraries sqlite3))
+
+(executable
+ (name test_static)
+ (libraries sqlite3)
+ (link_flags :standard -ccopt -static))
+
+(rule
+ (alias runtest)
+ (action
+  (run ./test.exe)))
+
+(rule
+ (alias runtest)
+ (action
+  (run ./test_static.exe)))

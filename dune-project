@@ -1,4 +1,4 @@
-(lang dune 2.7)
+(lang dune 3.0)
 (name sqlite3)
 
 (generate_opam_files true)
@@ -24,8 +24,8 @@ Sqlite3 is a self-contained, serverless, zero-configuration, transactional SQL
 database engine with outstanding performance for many use cases.")
   (depends
     (ocaml (>= 4.12))
-    dune-configurator
-    (conf-sqlite3 :build)
+    ;dune-configurator
+    ;(conf-sqlite3 :build)
     (ppx_inline_test :with-test)
   )
   (tags (clib:sqlite3 clib:pthread))

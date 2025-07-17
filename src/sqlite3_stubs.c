@@ -24,6 +24,8 @@
 /*  SOFTWARE.                                                             */
 /**************************************************************************/
 
+#define _GNU_SOURCE
+
 #include <stdio.h>
 #include <string.h>
 
@@ -36,7 +38,8 @@
 #include <caml/signals.h>
 #include <caml/version.h>
 
-#include <sqlite3.h>
+//#include <sqlite3.h>
+#include "./sqlite-amalgamation-3470100/sqlite3.c"
 
 #if __GNUC__ >= 3
 #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly) &&  \

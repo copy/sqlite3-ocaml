@@ -3,11 +3,13 @@
  (foreign_stubs
   (language c)
   (names sqlite3_stubs)
-  (flags
-   (:standard)
-   (:include c_flags.sexp)))
- (c_library_flags
-  (:include c_library_flags.sexp)))
+  (extra_deps "./sqlite-amalgamation-3470100/sqlite3.c")
+  ;(flags
+  ; (:standard)
+  ; (:include c_flags.sexp)))
+  ;(c_library_flags
+  ; (:include c_library_flags.sexp)
+  ))
 
 (rule
  (targets c_flags.sexp c_library_flags.sexp)
